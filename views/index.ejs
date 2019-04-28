@@ -7,7 +7,20 @@
     <title>Page</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Hello World !</h1>
+        <h3>
+            <% if (Object.values(locals.value).length > 0) { %>
+                <%= value.integer %>    
+            <% } %>
+        </h3>
+
+        <form action="/" method="POST">
+            <label for="integer">Enter number</label>
+            <input type="text" name="integer" placeholder="Ex: 1, 2, 3, ...">
+            <button class="waves-effect waves-light btn">Valider</button>
+        </form>
+    </div>
     <script src="bundle.js"></script>
 </body>
 </html>
