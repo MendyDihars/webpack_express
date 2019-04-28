@@ -11,5 +11,20 @@ module.exports = {
         contentBase: path.join(__dirname, 'views'),
         hot: true,
         compress: true
+    },
+    // LOADERS
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            }
+        ]
     }
 }
