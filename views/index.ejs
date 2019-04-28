@@ -8,19 +8,33 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hello World !</h1>
-        <h3>
-            <% if (Object.values(locals.value).length > 0) { %>
-                <%= value.integer %>    
-            <% } %>
-        </h3>
-
-        <form action="/" method="POST">
-            <label for="integer">Enter number</label>
-            <input type="text" name="integer" placeholder="Ex: 1, 2, 3, ...">
-            <button class="waves-effect waves-light btn">Valider</button>
+        <h2 class="center-align mb-70">Hello World !</h2>
+        <form action="/" method="POST" id="form">
+            <div class="row">
+                <input type="text" id="input" name="letter" hidden>
+                <div class="col m4 center-align">
+                    <div class="btn waves-effect waves-light export" data-value="A">
+                        A
+                    </div>
+                </div>
+                <div class="col m4 center-align">
+                    <div class="btn waves-effect waves-light export" data-value="B">
+                        B
+                    </div>
+                </div>
+                <div class="col m4 center-align">
+                    <div class="btn waves-effect waves-light export" data-value="C">
+                        C
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
+    <% if (locals.arr) { %>
+        <div class="center-align">
+            <%= arr %>
+        </div>
+    <% } %>
     <script src="bundle.js"></script>
 </body>
 </html>

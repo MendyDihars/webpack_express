@@ -19,6 +19,7 @@
     "css-loader": "^2.1.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-session": "^1.16.1",
     "materialize": "^1.0.0",
     "materialize-css": "^1.0.0",
     "node-sass": "^4.12.0",
